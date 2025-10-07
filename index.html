@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel y Lámina</title>
     <link rel="icon" href="https://panelylamina.com/wp-content/uploads/2023/02/cropped-cropped-isotipo-panel-y-lamina-32x32.png" sizes="32x32" />
-    <video src="images/1eraseccion/collage.mp4" autoplay muted playsinline preload="auto"></video>
+
 
     <style>
         * {
@@ -245,6 +245,26 @@
                 gap: 2rem;
             }
         }
+        /* Video/Imagen de la derecha */
+        .hero-media {
+            flex: 1;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            background: #ddd;
+            min-height: 500px;
+            max-height: 600px;
+        }
+
+        .hero-media video,
+        .hero-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
 
         @media (max-width: 768px) {
             .menu-toggle {
@@ -367,8 +387,7 @@
                 <!-- Opción 1: Video -->
                 <video autoplay muted loop playsinline>
                     <source src="images/1eraseccion/collage2.mp4" type="video/mp4">
-                    Tu navegador no soporta videos HTML5.
-                </video>
+
                 
                 <!-- Opción 2: Imagen -->
                 <img src="images/1eraseccion/collage.webp" alt="Proyectos de Panel y Lámina"> 
