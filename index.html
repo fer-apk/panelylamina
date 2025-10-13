@@ -207,11 +207,6 @@
             display: block;
         }
 
-        /* Por defecto, ocultar imagen (solo video en desktop/tablet) */
-        .hero-image {
-            display: none;
-        }
-
         /* Placeholder para video/imagen */
         .media-placeholder {
             width: 100%;
@@ -320,14 +315,6 @@
             .hero-media {
                 min-height: 400px;
             }
-
-            /* En móvil: ocultar video y mostrar imagen para no usar recursos del video */
-            .hero-video {
-                display: none;
-            }
-            .hero-image {
-                display: block;
-            }
         }
 
         @media (max-width: 480px) {
@@ -400,14 +387,14 @@
             </div>
 
             <div class="hero-media">
-                <!-- Video solo para pantallas >= 769px (no se descarga en móvil) -->
-                <video class="hero-video" autoplay muted loop playsinline preload="none">
-                    <source src="images/1eraseccion/collage2.mp4" type="video/mp4" media="(min-width: 769px)">
-                </video>
-                
-                <!-- Imagen mostrada en móvil -->
-                <img class="hero-image" src="images/1eraseccion/collage.webp" alt="Proyectos de Panel y Lámina"> 
+                <!-- Opción 1: Video -->
+                <video autoplay muted loop playsinline>
+                    <source src="images/1eraseccion/collage2.mp4" type="video/mp4">
 
+                
+                <!-- Opción 2: Imagen -->
+                <img src="images/1eraseccion/collage.webp" alt="Proyectos de Panel y Lámina"> 
+            
             </div>
         </div>
     </section>
